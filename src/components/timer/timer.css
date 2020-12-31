@@ -1,0 +1,18 @@
+.timer {
+    display: flex;
+    height: 50vh;
+    align-items: center;
+    font-size: 60px;
+    justify-content: center;
+}
+@media (max-width: 567px)  {
+    .timer {
+        font-size: 35px;
+    }
+}
+
+@media (max-width: 320px)  {
+    .timer {
+        font-size: 25px;
+    }
+}

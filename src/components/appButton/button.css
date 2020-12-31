@@ -1,0 +1,13 @@
+.btn {
+    shape-outside: circle();
+    clip-path: circle();
+    cursor: pointer;
+    padding: 35px;
+    background-color: #525050;
+    color: #fff5f5;
+
+    font-size: 16px;
+
+    outline: none;
+    border: none
+}
