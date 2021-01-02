@@ -2,13 +2,22 @@ import React from 'react';
 
 import './timer.css';
 
-const Timer = ({ seconds, minutes, hours }) => {
-    const ss = seconds.toString().length > 1 ?  seconds: "0" + seconds.toString();
-    const mm = minutes.toString().length > 1 ?  minutes: "0" + minutes.toString();
-    const hh = hours.toString().length > 1 ?  hours: "0" + hours.toString();
+const Timer = ({ seconds }) => {
+    const getSeconds = () => {
+        return ('0' + seconds % 60).slice(-2)
+    }
+    const getMinutes = () => {
+        const minutes = Math.floor((seconds / 60) % 60)
+        return ('0' + minutes).slice(-2)
+    }
+
+    const getHours = () => {
+        const hours = Math.floor((seconds / 3600))
+        return ('0' + hours).slice(-2)
+    }
     return (
         <div className='timer'>
-            <h1>{ hh } : { mm } : { ss } </h1>
+            <h1> { getHours() } : { getMinutes() }: { getSeconds() } </h1>
         </div>
     );
 };
